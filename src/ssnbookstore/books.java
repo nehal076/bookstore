@@ -39,7 +39,7 @@ public class books extends HttpServlet
 	 try
 	 {
 	  Class.forName("com.mysql.jdbc.Driver");
-	  Connection cn=DriverManager.getConnection("jdbc:mysql://sociogram.c9rgg7nk0bfq.us-east-2.rds.amazonaws.com:3306/bookstore","admin","Nehal!076");
+	  Connection cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/bookstore","root","nehal");
 	  Statement st=cn.createStatement();
 	  ResultSet rs=st.executeQuery("select * from bookstore.books"); 
      
@@ -76,7 +76,7 @@ public class books extends HttpServlet
 	  try
 	  {
 	   Class.forName("com.mysql.jdbc.Driver");
-	   Connection cn=DriverManager.getConnection("jdbc:mysql://sociogram.c9rgg7nk0bfq.us-east-2.rds.amazonaws.com:3306/bookstore","admin","Nehal!076");
+	   Connection cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/bookstore","root","nehal");
 	   PreparedStatement pst=cn.prepareStatement("update books set qoh=? where bookid=?");
 	  
 	   pst.setInt(1, bd.qoh);

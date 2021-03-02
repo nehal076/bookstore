@@ -42,8 +42,8 @@ public class detail extends HttpServlet
 		 float disc=(float) (((float)bd.discount/100.0)*bd.price);
 		 int rate=(int) (bd.price-disc);
 		 
-		 String html="<html><body bgcolor=teal>"
-		 		    +"<div style=\"border:solid 1px red;margin:10px;padding:50px;display: block;float:left;\">"
+		 String html="<html><body bgcolor=teal><center>"
+		 		    +"<div style=\"border:solid 1px red;margin:10px;padding:50px;display: block;width: 350px;\">"
 		 		    +"<form action=addtocart>"
 					+"<img src='"+bookid+".jpg' height=300 width=240>"
 					+"<font face=\"lucida console\" size=4 color=yellow>"
@@ -76,7 +76,7 @@ public class detail extends HttpServlet
 		          +"style=\"background-color:#ff9f00;box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);padding: 18px 8px;border-radius: 2px;border:none;color: #fff;size:14;\"/></a>";
 
 		  
-		 html=html+"</form></div></body></html>";
+		 html=html+"</form></div></center></body></html>";
 	     response.getWriter().println(html); 
 
 	}
